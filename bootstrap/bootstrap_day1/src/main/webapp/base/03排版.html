@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个bootstrap程序</title>
+    <!--获得更好的响应式支持-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--引入bootstrap核心css文件-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+</head>
+<body>
+
+
+    <!--标签文本 mark-->
+    <p>this is  springboot,<mark> springboot </mark>is very good framework</p>
+
+    <!--删除文本 del-->
+    <p>
+        This line of text is meant to be <del> treated as deleted text</del>
+    </p>
+
+    <!--无用文本 s-->
+    <p>
+        This line of text is meant to be <s> treated as deleted text</s>
+    </p>
+
+    <!--插入文本 ins and u-->
+    <p>我是小陈,<ins>曾经也是一个单纯的少年?</ins></p>
+    <p>我是小陈,<u>曾经也是一个单纯的少年?</u></p>
+
+    <!--小号文本 默认为父容器的文本的85%-->
+    <p>我是小陈,我现在在讲 <small>小号文本</small></p>
+
+    <!--着重文本 strong-->
+    <p>我是小陈,我在 <strong> 百知</strong></p>
+
+    <!--斜体文本 em-->
+    <p>我们2001班都是好孩子, <em> 经常上网打游戏,经常不睡觉!</em></p>
+
+    <!--文本对齐方式 left right  center  justify(超出容器自动换行) nowrap (超出容器也不换行,增加滚动条始终一行展示)-->
+    <p class="text-left">我们是2001班</p>
+    <p class="text-center">我们是2001班</p>
+    <p class="text-right">我们是2001班</p>
+    <p class="text-justify">我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班</p>
+    <p class="text-nowrap">我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班我们是2001班</p>
+
+    <!--改变大小写-->
+    <p class="text-uppercase">this is good  2001</p>
+    <p class="text-lowercase">THIS IS GOOD  2001</p>
+    <p class="text-capitalize">this is good  2001</p>
+
+    <!--缩略语 abbr-->
+    <p>
+        <abbr title="spring is very good">spring</abbr> framework is open source,this id good javaEE framework!!!
+    </p>
+
+    <!--地址样式 address -->
+    <address>
+        <strong> chen.xiao</strong>
+        <p>北京市海淀区清河街道</p>
+        <a href="http://www.baidu.com">chenyn@zparkhr.com.cn</a>
+    </address>
+
+    <!--引用 blockquote-->
+    <blockquote style="border-left: 5px solid #ef0909; background: #f1ecec;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    </blockquote>
+
+    <!--列表 ul>li ol>li  list-unstyled 无样式列表  list-inline 行内列表-->
+    <ul>
+        <li>SpringMVC</li>
+        <li>Spring</li>
+        <li>SpringBoot</li>
+        <li>SpringCloud</li>
+    </ul>
+    <ol>
+        <li>SpringMVC</li>
+        <li>Spring</li>
+        <li>SpringBoot</li>
+        <li>SpringCloud</li>
+    </ol>
+    <ol class="list-unstyled">
+        <li>SpringMVC
+            <ul>
+                <li>小黑</li>
+                <li>小名</li>
+                <li>小陈</li>
+            </ul>
+        </li>
+        <li>Spring</li>
+        <li>SpringBoot</li>
+        <li>SpringCloud</li>
+    </ol>
+
+    <ul  class="list-inline">
+        <li>Spring</li>
+        <li>BootStrap</li>
+        <li>Elastic Search</li>
+    </ul>
+
+</body>
+</html>

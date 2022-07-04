@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个bootstrap程序</title>
+    <!--获得更好的响应式支持-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--引入bootstrap核心css文件-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<div class="table-responsive">
+    <!--基本表格 table table-striped(斑马线) table-bordered (边框) table-hover(鼠标悬停变色) table-condensed(紧缩表格)-->
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr>
+            <th class="text-center">编号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>生日</th>
+            <th>邮箱</th>
+        </tr>
+        <tbody>
+            <tr class="info text-center">
+                <td>1</td>
+                <td>张三</td>
+                <td>28</td>
+                <td>2012/12/12</td>
+                <td>6007744@qq.com</td>
+            </tr>
+            <tr class="success">
+                <td>2</td>
+                <td>李四</td>
+                <td>28</td>
+                <td>2012/12/12</td>
+                <td>6007744@qq.com</td>
+            </tr>
+            <tr class="warning">
+                <td>3</td>
+                <td>李四</td>
+                <td>28</td>
+                <td>2012/12/12</td>
+                <td>6007744@qq.com</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>李四</td>
+                <td>28</td>
+                <td class="info">2012/12/12</td>
+                <td class="danger">6007744@qq.com</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap中组件使用</title>
+    <!--引入bootstrap核心css-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <!--引入jquery核心js文件-->
+    <!--引入bootstrap核心js文件-->
+</head>
+<body>
+
+
+    <!--使用字体图标
+        1.所有字体图标都有一个基类  glyphicon 使用对应图标类
+        2.不能与任何bootstrap中类联合使用 必须单独创建一个span标签嵌套 通过span进行图标使用
+        3.为了设置正确的内补（padding），务必在图标和文本之间添加一个空格。
+        4.只对内容为空的元素起作用
+    -->
+    <p class="text-info">
+        bootstrap is good,小陈正在讲bootstrap <span class="glyphicon glyphicon-education"></span>
+    </p>
+    <br><br>
+    <span class="glyphicon glyphicon-adjust"></span> 小黑
+    <span class="glyphicon glyphicon-apple"></span>
+    <span class="glyphicon glyphicon-user"></span>
+    <span class="glyphicon glyphicon-align-center"></span>
+    <span class="glyphicon glyphicon-align-left"></span>
+    <span class="glyphicon glyphicon-align-right"></span>
+    <span class="glyphicon glyphicon-asterisk"></span>
+    <span class="glyphicon glyphicon-tree-conifer"></span>
+    <span class="glyphicon glyphicon-certificate"></span>
+    <span class="glyphicon glyphicon-thumbs-up"></span>
+    <br><br>
+    <button class="btn btn-info btn-lg"> <span class="glyphicon glyphicon-user"></span> 用户登录</button>
+
+</body>
+</html>

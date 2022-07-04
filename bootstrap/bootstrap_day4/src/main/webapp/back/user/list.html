@@ -1,0 +1,203 @@
+
+        <!--页面中心内容-->
+        <div class="col-sm-10">
+            <!--页头-->
+            <div class="page-header" style="margin-top: -20px;margin-bottom: 5px;">
+                <h1>用户管理</h1>
+            </div>
+            <!--标签页组件-->
+            <div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">用户列表</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">添加用户</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <!--处理用户列表的面板-->
+                        <div class="panel panel-default">
+
+                            <div class="panel-body text-center">
+
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="exampleInputName2">Name</label>
+                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail2">Email</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Send invitation</button>
+                                </form>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <!--添加按钮-->
+                                    <!--<ul class="list-unstyled">-->
+                                        <!--<li><button class="btn btn-success btn-sm">添加用户信息</button></li>-->
+                                    <!--</ul>-->
+                                    <!--表格-->
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                            <th>Options</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <a href="" class="btn btn-danger btn-sm">删除</a>
+                                                <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#editUserModal">修改</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>
+                                                <a href="" class="btn btn-danger btn-sm">删除</a>
+                                                <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#editUserModal">修改</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>
+                                                <a href="" class="btn btn-danger btn-sm">删除</a>
+                                                <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#editUserModal">修改</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--分页组件-->
+                                    <div class="pull-right">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination">
+                                                <li class="disabled">
+                                                    <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--处理消息提示-->
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>删除成功:</strong>当前数据以被删除!
+                        </div>
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>删除失败:</strong> java.lang.RuntimeException 删除数据无效!
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <!--添加表单-->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-offset-1 col-sm-10">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="aa">Email address</label>
+                                                <input type="email" class="form-control" id="aa" placeholder="Email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="bb">Password</label>
+                                                <input type="password" class="form-control" id="bb" placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cc">File input</label>
+                                                <input type="file" id="cc">
+                                                <p class="help-block">Example block-level help text here.</p>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Check me out
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn btn-info btn-block">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--修改模态框-->
+        <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                       placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputFile">File input</label>
+                                <input type="file" id="exampleInputFile">
+                                <p class="help-block">Example block-level help text here.</p>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Check me out
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function(){
+
+            })
+        </script>

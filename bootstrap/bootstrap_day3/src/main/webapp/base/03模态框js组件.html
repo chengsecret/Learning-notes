@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件的使用</title>
+    <!--引入bootstrap核心css-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <!--引入jquery核心js-->
+    <script src="../boot/js/jquery-3.5.1.min.js"></script>
+    <!--引入bootstrap核心js-->
+    <script src="../boot/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+
+            //页面加载之后立即展示模态框
+            $("#myModal").modal({
+                show: true,//展示模态框
+                backdrop: 'static',//点击旁边区域不关闭模态框
+                keyboard: false,//按下键盘上esc键关闭对话框
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!--
+    模态框: 对话框  modal 模态框 modal
+        使用注意事项:
+        1.在一张页面中不支持同时打开多个模态框 千万不要在一个模态框上重叠另一个模态框。
+        2.务必将模态框的 HTML 代码放在文档的最高层级内（也就是说，尽量作为 body 标签的直接子元素），以避免其他组件影响模态框的展现和/或功能。
+-->
+
+<!--基本实例 modal 方法的使用 模态框组件.modal({}) -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!--模态框标题-->
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">用户编辑</h4>
+            </div>
+            <!--中心内容-->
+            <form action="http://www.baidu.com">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" id="exampleInputFile">
+                        <p class="help-block">Example block-level help text here.</p>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Check me out
+                        </label>
+                    </div>
+
+                </div>
+                <!--脚注-->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">确定编辑</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">取消编辑</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

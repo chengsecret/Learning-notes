@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个bootstrap程序</title>
+    <!--获得更好的响应式支持-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--引入bootstrap核心css文件-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <style>
+        .col-xs-1{
+            border:1px red solid;
+            padding-left: 0px;
+        }
+        .col-xs-4{
+            border:1px green solid;
+        }
+        .col-xs-3{
+            border:1px gold solid;
+        }
+
+        .col-sm-2{
+            border:1px yellowgreen solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+       布局: 容器  container  container-fluid
+       栅格系统: 主要作用 用来完成bootstrap页面布局
+           栅格系统中流式布局
+                存在行的概念: 将页面中拆分成一行一行
+                存在列的概念: bootstrap栅格系统将页面中拆分的一行最多分为12列 默认 12等份列
+                bootstrap 为什么默认分为12列     12 计算 2*6 3*4 4+8  3+9
+
+       使用栅格系统注意事项:
+        1.栅格系统必须包含在容器布局中 .container .container-fluid 100%
+    -->
+
+    <!--创建容器-->
+    <div class="container">
+        <!--创建一行-->
+        <div class="row">
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">1</div>
+        </div>
+        <br>
+        <!--创建第二行-->
+        <div class="row">
+            <div class="col-xs-4">4</div>
+            <div class="col-xs-4">4</div>
+            <div class="col-xs-4">4</div>
+        </div>
+        <br>
+
+        <!--创建第三行 超出12份另起一行-->
+        <div class="row">
+            <div class="col-xs-3">3</div>
+            <div class="col-xs-3">3</div>
+            <div class="col-xs-3">3</div>
+            <div class="col-xs-3">3</div>
+            <div class="col-xs-1">1</div>
+        </div>
+
+        <!--创建第四行-->
+        <div class="row">
+            <div class="col-sm-2">2</div>
+            <div class="col-sm-2">2</div>
+            <div class="col-sm-2">2</div>
+            <div class="col-sm-2">2</div>
+            <div class="col-sm-2">2</div>
+            <div class="col-sm-2">2</div>
+        </div>
+        <br>
+
+        <!--栅格系统可以不等份-->
+        <div class="row">
+            <div class="col-sm-4" style="border: 1px red solid;">4</div>
+            <div class="col-sm-2" style="border: 1px red solid;">2</div>
+            <div class="col-sm-3" style="border: 1px red solid;">3</div>
+            <div class="col-sm-3" style="border: 1px red solid;">3</div>
+        </div>
+        <br>
+        <!--栅格系统的嵌套-->
+        <div class="row">
+            <div class="col-sm-4" style="border: 1px red solid;padding-left: 0px">
+                <div class="col-sm-3" style="border: 1px blue solid;">3</div>
+                <div class="col-sm-3" style="border: 1px blue solid;">3</div>
+                <div class="col-sm-3" style="border: 1px blue solid;">3</div>
+                <div class="col-sm-3" style="border: 1px blue solid;">3</div>
+            </div>
+            <div class="col-sm-4" style="border: 1px red solid;">4</div>
+            <div class="col-sm-4" style="border: 1px red solid;">4</div>
+        </div>
+        <br>
+        <!--栅格系统列偏移 offset-->
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-4"  style="border: 1px red solid;">8</div>
+        </div>
+
+        <!--栅格系统使用 -->
+
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2"><h1 class="text-center">班级管理系统 <small>V1.0</small></h1></div>
+            <div class="col-sm-2"><h3 class="text-center" style="margin-top: 26px;">欢迎:xxx</h3></div>
+        </div>
+
+    </div>
+</body>
+</html>

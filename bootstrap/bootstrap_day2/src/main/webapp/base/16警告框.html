@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap中组件使用</title>
+    <!--引入bootstrap核心css-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <!--引入jquery核心js文件-->
+    <script src="../boot/js/jquery-3.5.1.min.js"></script>
+    <!--引入bootstrap核心js文件-->
+    <script src="../boot/js/bootstrap.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <!--构建警告框 alert  alert-xx  success info  danger  waring-->
+    <div class="alert alert-danger">this is messages</div>
+    <div class="alert alert-info">this is messages</div>
+    <div class="alert alert-warning">this is messages</div>
+    <div class="alert alert-success">this is messages</div>
+
+
+    <!--具有关闭功能的警告框 只有在按钮中加入data-dismiss="alert" 才能具有关闭事件-->
+    <div class="alert alert-danger">
+        <button class="close" data-dismiss="alert"> <span>&times;</span> </button>
+        这是一个可以关闭 <a href="" class="alert-link">警告框</a>!
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jqgrid第一个demo</title>
+
+    <!--引入bootstrap核心css-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <!--引入jqgrid核心css-->
+    <link rel="stylesheet" href="../boot/grid/ui.jqgrid-bootstrap.css">
+    <!--引入jquery核心js-->
+    <script src="../boot/js/jquery-3.5.1.min.js"></script>
+    <!--引入jqgrid核心js-->
+    <script src="../boot/grid/jquery.jqGrid.min.js"></script>
+    <!--引入jqgrid国际化js-->
+    <script src="../boot/grid/grid.locale-cn.js"></script>
+    <!--引入bootstrap核心js-->
+    <script src="../boot/js/bootstrap.min.js"></script>
+    <style>
+        th{
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(function(){
+            /**
+             * 1.jqgrid的表格属性使用方式:    将属性以对象方式作为jqgrid的参数进行传递即可,对象中属性名:属性值书写
+             * 2.jqgrid表格中列属性使用方式:  列属性使用也是以对象的形式作为colModel的参数进行传递即可
+             * 3.jqgrid中事件的使用方式   :  将对应时间以对象方式作为jqgrid的参数进行传递即可
+             * 4.jqgrid中方法的使用方式   :  对应jqgrid组件选择器.jqgrid('方法名',参数列表)
+             */
+            //初始化表格
+            $("#userList").jqGrid({//属性
+                styleUI:"Bootstrap",//用来指定jqgrid的主题样式 固定写死必须是Bootstrap
+                url:"./listpage.json",//用来远程获取数据地址  json格式类型 [{"id":"1","name":"张三"},{}]
+                datatype:"json",//用来指定服务返回的数据类型  默认是:xml 修改为:json
+                mtype:"POST",//用来指定请求方式 默认GET方式请求,
+                colNames:["编号","姓名","年龄","生日","性别","部门"], //用来指定表格中标题列的名称  colNames 和 colModel 必须成对出现  长度一致
+                colModel:[
+                    {name:"id",align:"center",hidedlg:true,hidden:false,search:false},
+                    {name:"name",editable:true,align:"center",resizable:false,width:300},
+                    {name:"age",editable:true,align:"center",
+                        formatter:function(cellvalue, options, rowObject){//用来对数据进行二次处理
+                            console.log(cellvalue);
+                            console.log(options);
+                            console.log(rowObject);
+                            if(cellvalue>23){
+                                return "<font color='green'>库存充足!</font>";
+                            }
+                            return "<font color='red'>库存不足,请补充货源</font>";
+                        },
+                        edittype:"text",
+                        editoptions:{
+                            value:"",
+                        }
+                    },
+                    {name:"bir",editable:true,align:"center"},
+                    {name:"sex",editable:true,align:"center",edittype:"select",
+                        editoptions:{//本地写死数据
+                            //multiple:true,//实现下拉列表多选
+                            value:"1:北京;2:天津;3:河南"
+                        }
+                    },
+                    {name:"deptName",editable:true,align:"center",
+                        formatter:function(cellvalue, options, rowObject){
+                            return rowObject.dept.name;
+                        },
+                        edittype:"select",//在编辑表单中渲染的格式 1.本地写死数据  2.远程获取
+                        editoptions:{//本地写死数据
+                            //multiple:true,//实现下拉列表多选
+                            dataUrl:"/dept/findAll",
+                            //从远端服务器获取数据 字符串 一段html字符串 <select><option value="21">研发部</option>.....</select>
+                        }
+
+                    },
+                ],
+                //注意:一旦做了分页处理之后数据返回格式必须为:
+                pager:"#pager",//用来定义分页工具栏  用来处理分页请求:后台可以定义Integer page(当前页) Integer rows (每页显示的记录)
+                viewrecords:true,//展示总条数
+                page:2,//初始页码
+                rowNum:5,//每页显示条数 默认是20,
+                rowList:[2,10,15,50,100],//用来定义一个下拉列表,可选页面展示多少条数据
+                sortname:"price",//基于那个列进行排序 接口的参数名为: sidx
+                caption:"员工列表",
+                hidegrid:false,//禁用在标题下展示控制隐藏表格的按钮 false 不显示 true 显示
+                autowidth:true,//自适应父容器
+                height:600,//指定高度
+                pagerpos:"center",//分页的位置
+                pgbuttons:true,//是否展示分页中翻页按钮
+                pginput:true,//
+                editurl:"/user/edit",//编辑时的url设置
+                gridComplete:function(){//事件使用
+
+                },
+                onCellSelect:function(rowid,iCol,cellcontent,e){//点击单元格
+                    console.log(rowid);
+                    console.log(iCol);
+                    console.log(cellcontent);
+                    console.log(e);
+                }
+            }).navGrid("#pager",
+                        {add:true,edit:true,del:true,search:true,refresh:true},
+                        {height:600,width:700,closeAfterEdit: true,reloadAfterSubmit: true,},//编辑面板配置
+                        {height:600,width:700,closeAfterAdd: true, reloadAfterSubmit: true,},//添加配置
+                        {closeAfterDelete: true, reloadAfterSubmit: true},//删除配置
+                        {
+                            sopt: [ 'cn',  'eq', 'ne', 'lt', 'gt' ]
+                        }//搜索配置
+                        );
+                //快速加入编辑功能 参数1: 将快速编辑按钮放入那个位置 参数2:展示编辑的配置对象,
+                                //    参数3:代表对编辑面板的配置  参数4:添加面板的配置  参数5: 删除面板的配置  参数6:搜索面板的配置  参数7:刷新的配置
+        });
+
+        function testMethod(){
+
+            $("#userList").jqGrid('clearGridData',true);//清除数据
+            $("#userList").jqGrid('setCaption',"小陈");//清除数据
+        }
+    </script>
+</head>
+<body>
+
+
+    <!--表格标签  1.jquery 插件  属性(文档中就是初始化参数大全) 对象 {}  事件  方法 -->
+    <table id="userList"></table>
+
+    <!--定义展示分页标签-->
+    <div id="pager"></div>
+
+
+    <button class="btn btn-default" onclick="testMethod()">测试方法</button>
+
+</body>
+</html>

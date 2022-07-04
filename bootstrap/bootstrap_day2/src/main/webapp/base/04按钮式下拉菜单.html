@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap中组件使用</title>
+    <!--引入bootstrap核心css-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <!--引入jquery核心js文件-->
+    <script src="../boot/js/jquery-3.5.1.min.js"></script>
+    <!--引入bootstrap核心js文件-->
+    <script src="../boot/js/bootstrap.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <br><br>
+    <!--按钮式下拉菜单 btn-group-->
+    <div class="btn-group">
+        <!--下拉按钮-->
+        <button class="btn btn-primary" data-toggle="dropdown">选择爱好 <span class="caret"></span> </button>
+        <!--下拉菜单-->
+        <ul class="dropdown-menu">
+            <li class="dropdown-header">美食菜单</li>
+            <li><a href="">美食</a></li>
+            <li class="divider"></li>
+            <li><a href="">看电视</a></li>
+            <li><a href="">唱歌</a></li>
+        </ul>
+    </div>
+
+    <br><br>
+    <!--分裂式下拉菜单 btn-group-->
+    <div style="margin: 200px;">
+        <div class="btn-group dropup">
+            <!--下拉按钮-->
+            <button class="btn btn-primary btn-lg" >选择爱好</button>
+            <button class="btn btn-primary btn-lg" data-toggle="dropdown">  <span class="caret"></span>  </button>
+            <!--下拉菜单-->
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">美食菜单</li>
+                <li><a href="">美食</a></li>
+                <li class="divider"></li>
+                <li><a href="">看电视</a></li>
+                <li><a href="">唱歌</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

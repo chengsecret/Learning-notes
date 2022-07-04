@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap中组件使用</title>
+    <!--引入bootstrap核心css-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <!--引入jquery核心js文件-->
+    <script src="../boot/js/jquery-3.5.1.min.js"></script>
+    <!--引入bootstrap核心js文件-->
+    <script src="../boot/js/bootstrap.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <!--创建一个进度条 progress progress-bar-xxx success danger info waring   strip -->
+    <div class="progress">
+        <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 30%;">
+            30%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 70%;">
+            70%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 90%;">
+            90%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-warning" style="width: 10%;">
+            10%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-danger" style="width: 30%;">
+            30%
+        </div>
+    </div>
+
+    <!--堆叠进度条-->
+    <div class="progress">
+        <div class="progress-bar progress-bar-success" style="width: 35%">
+            35%
+            <span class="sr-only">35% Complete (success)</span>
+        </div>
+        <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+            20%
+            <span class="sr-only">20% Complete (warning)</span>
+        </div>
+        <div class="progress-bar progress-bar-danger" style="width: 10%">
+            10%
+            <span class="sr-only">10% Complete (danger)</span>
+        </div>
+    </div>
+</body>
+</html>

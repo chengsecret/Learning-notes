@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap中组件使用</title>
+    <!--引入bootstrap核心css-->
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <!--引入jquery核心js文件-->
+    <script src="../boot/js/jquery-3.5.1.min.js"></script>
+    <!--引入bootstrap核心js文件-->
+    <script src="../boot/js/bootstrap.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <br><br>
+    <!--按钮组组件的基本使用 btn-group-->
+    <div class="btn-group">
+        <button class="btn btn-success btn-sm">Spring</button>
+        <button class="btn btn-info btn-sm">Redis</button>
+        <button class="btn btn-danger btn-sm">ElasticSearch</button>
+    </div>
+
+    <br><br>
+    <!--按钮工具栏 btn-toolbar -->
+    <div class="btn-toolbar" id="btntoolbar">
+        <div class="btn-group">
+            <button class="btn btn-info">添加</button>
+            <button class="btn btn-danger">删除</button>
+            <button class="btn btn-primary">修改</button>
+            <button class="btn btn-success">查询</button>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-warning">搜索</button>
+            <button class="btn btn-default">过滤</button>
+        </div>
+    </div>
+    <br><br>
+    <!--调整一组按钮的尺寸 btn-group-lg btn-group btn-group-sm btn-group-xs -->
+    <div class="btn-group btn-group-sm">
+        <button class="btn btn-success">Spring</button>
+        <button class="btn btn-info">Redis</button>
+        <button class="btn btn-danger">ElasticSearch</button>
+    </div>
+    <br><br>
+
+    <!--按钮嵌套-->
+    <div class="btn-group">
+        <a href="" class="btn btn-info">添加</a>
+        <a href="" class="btn btn-danger">删除</a>
+        <!--按钮组嵌套-->
+        <div class="btn-group">
+            <button class="btn btn-warning" data-toggle="dropdown">选择课程 <span class="caret"></span> </button>
+            <ul class="dropdown-menu">
+                <li><a href="">Redis</a></li>
+                <li><a href="">Bootstrap</a></li>
+                <li><a href="">Spring</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br>
+    <!--垂直排列的按钮组 btn-group-vertical -->
+    <div class="btn-group-vertical">
+        <a href="" class="btn btn-info">添加</a>
+        <a href="" class="btn btn-danger">删除</a>
+        <!--按钮组嵌套-->
+        <div class="btn-group">
+            <button class="btn btn-warning" data-toggle="dropdown">选择课程 <span class="caret"></span> </button>
+            <ul class="dropdown-menu">
+                <li><a href="">Redis</a></li>
+                <li><a href="">Bootstrap</a></li>
+                <li><a href="">Spring</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!--按钮组自适应屏幕宽度 btn-group-justified-->
+    <div class="btn-group btn-group-justified">
+        <a href="" class="btn btn-info">添加</a>
+        <a href="" class="btn btn-danger">删除</a>
+        <!--按钮组嵌套-->
+        <div class="btn-group">
+            <button class="btn btn-warning" data-toggle="dropdown">选择课程 <span class="caret"></span> </button>
+            <ul class="dropdown-menu">
+                <li><a href="">Redis</a></li>
+                <li><a href="">Bootstrap</a></li>
+                <li><a href="">Spring</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>
